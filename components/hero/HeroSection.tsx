@@ -1,3 +1,6 @@
+import Link from "next/link";
+import { FaWhatsapp, FaInstagram, FaFacebook, FaTools, FaImages, FaInfoCircle, FaPhoneAlt } from "react-icons/fa";
+
 export function HeroSection() {
   return (
     <section className="min-h-screen flex items-center justify-center bg-white">
@@ -15,18 +18,12 @@ export function HeroSection() {
           </p>
           <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
             <a
-              href={`https://wa.me/${process.env.NEXT_PUBLIC_WHATSAPP_NUMBER}?text=Halo%20Avion%20AC%2C%20saya%20ingin%20konsultasi%20layanan%20AC`}
+              href="https://wa.me/6285357607825?text=Halo%20Avion%20AC%2C%20saya%20ingin%20konsultasi%20layanan%20AC"
               target="_blank"
               rel="noopener noreferrer"
               className="inline-flex items-center gap-3 px-8 py-4 bg-primary-700 text-white rounded-lg font-medium hover:bg-primary-800 transition-colors shadow-soft"
             >
-              <svg
-                className="w-5 h-5"
-                fill="currentColor"
-                viewBox="0 0 24 24"
-              >
-                <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.67-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.076 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421-7.403h-.004a9.87 9.87 0 00-9.746 9.798c0 2.734.732 5.394 2.124 7.712l-2.256 6.556 6.722-2.213c2.308 1.268 4.909 1.937 7.612 1.937 5.388 0 9.803-4.414 9.803-9.805 0-2.618-.674-5.074-1.954-7.178A9.86 9.86 0 0012.051 6.979z" />
-              </svg>
+              <FaWhatsapp className="w-5 h-5" />
               Hubungi WhatsApp
             </a>
 
@@ -36,13 +33,7 @@ export function HeroSection() {
               rel="noopener noreferrer"
               className="inline-flex items-center gap-3 px-8 py-4 bg-pink-600 text-white rounded-lg font-medium hover:bg-pink-700 transition-colors shadow-soft"
             >
-              <svg
-                className="w-5 h-5"
-                viewBox="0 0 24 24"
-                fill="currentColor"
-              >
-                <path d="M7.75 2h8.5A5.75 5.75 0 0122 7.75v8.5A5.75 5.75 0 0116.25 22h-8.5A5.75 5.75 0 012 16.25v-8.5A5.75 5.75 0 017.75 2zm0 1.5A4.25 4.25 0 003.5 7.75v8.5A4.25 4.25 0 007.75 20.5h8.5a4.25 4.25 0 004.25-4.25v-8.5A4.25 4.25 0 0016.25 3.5h-8.5zm10.25 2.25a.75.75 0 110 1.5.75.75 0 010-1.5zM12 7a5 5 0 110 10 5 5 0 010-10zm0 1.5a3.5 3.5 0 100 7 3.5 3.5 0 000-7z" />
-              </svg>
+              <FaInstagram className="w-5 h-5" />
               Kunjungi Instagram
             </a>
 
@@ -52,15 +43,35 @@ export function HeroSection() {
               rel="noopener noreferrer"
               className="inline-flex items-center gap-3 px-8 py-4 bg-blue-700 text-white rounded-lg font-medium hover:bg-blue-800 transition-colors shadow-soft"
             >
-              <svg
-                className="w-5 h-5"
-                viewBox="0 0 24 24"
-                fill="currentColor"
-              >
-                <path d="M22 12a10 10 0 10-11.5 9.9v-7h-2v-2.9h2V9.4c0-2 1.2-3.1 3-3.1.9 0 1.8.1 1.8.1v2h-1c-1 0-1.4.7-1.4 1.4v1.7h2.4l-.4 2.9h-2v7A10 10 0 0022 12z" />
-              </svg>
+              <FaFacebook className="w-5 h-5" />
               Kunjungi Facebook
             </a>
+          </div>
+
+          {/* Quick Navigation for Mobile/UX */}
+          <div className="mt-16 pt-12 border-t border-gray-100">
+            <p className="text-sm font-semibold text-gray-400 uppercase tracking-widest mb-8">
+              Navigasi Cepat
+            </p>
+            <div className="grid grid-cols-2 md:grid-cols-4 gap-4 max-w-3xl mx-auto">
+              {[
+                { name: "Layanan", href: "/services", icon: <FaTools />, color: "text-blue-600" },
+                { name: "Galeri", href: "/gallery", icon: <FaImages />, color: "text-purple-600" },
+                { name: "Tentang", href: "/about", icon: <FaInfoCircle />, color: "text-amber-600" },
+                { name: "Kontak", href: "/contact", icon: <FaPhoneAlt />, color: "text-green-600" },
+              ].map((item) => (
+                <Link
+                  key={item.href}
+                  href={item.href}
+                  className="flex flex-col items-center gap-3 p-6 bg-gray-50 rounded-2xl hover:bg-white hover:shadow-soft-lg hover:scale-105 transition-all duration-300 group border border-transparent hover:border-primary-100"
+                >
+                  <div className={`text-2xl ${item.color} group-hover:scale-110 transition-transform`}>
+                    {item.icon}
+                  </div>
+                  <span className="text-sm font-medium text-gray-700">{item.name}</span>
+                </Link>
+              ))}
+            </div>
           </div>
         </div>
       </div>

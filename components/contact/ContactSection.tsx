@@ -2,6 +2,7 @@
 
 import React from "react";
 import { motion } from "framer-motion";
+import { FaWhatsapp, FaEnvelope, FaPhone } from "react-icons/fa";
 
 export function ContactSection() {
   return (
@@ -27,7 +28,7 @@ export function ContactSection() {
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-12">
             {/* WhatsApp */}
             <motion.a
-              href={`https://wa.me/${process.env.NEXT_PUBLIC_WHATSAPP_NUMBER}`}
+              href="https://wa.me/6285357607825"
               target="_blank"
               rel="noopener noreferrer"
               initial={{ opacity: 0, y: 20 }}
@@ -36,14 +37,14 @@ export function ContactSection() {
               whileHover={{ scale: 1.05 }}
               className="p-8 bg-white/10 backdrop-blur-sm rounded-2xl hover:bg-white/20 transition-colors text-center group"
             >
-              <div className="text-5xl mb-4 group-hover:scale-110 transition-transform">
-                💬
+              <div className="flex justify-center text-5xl mb-4 group-hover:scale-110 transition-transform">
+                <FaWhatsapp className="text-green-400" />
               </div>
               <h3 className="text-xl font-bold mb-2">WhatsApp</h3>
               <p className="text-sm opacity-90 mb-4">
                 Respons kilat untuk pertanyaan Anda
               </p>
-              <div className="text-sm font-semibold">628xxxxxxxxxx</div>
+              <div className="text-sm font-semibold">6285357607825</div>
             </motion.a>
 
             {/* Email */}
@@ -55,8 +56,8 @@ export function ContactSection() {
               whileHover={{ scale: 1.05 }}
               className="p-8 bg-white/10 backdrop-blur-sm rounded-2xl hover:bg-white/20 transition-colors text-center group"
             >
-              <div className="text-5xl mb-4 group-hover:scale-110 transition-transform">
-                ✉️
+              <div className="flex justify-center text-5xl mb-4 group-hover:scale-110 transition-transform">
+                <FaEnvelope className="text-blue-400" />
               </div>
               <h3 className="text-xl font-bold mb-2">Email</h3>
               <p className="text-sm opacity-90 mb-4">
@@ -74,8 +75,8 @@ export function ContactSection() {
               whileHover={{ scale: 1.05 }}
               className="p-8 bg-white/10 backdrop-blur-sm rounded-2xl hover:bg-white/20 transition-colors text-center group"
             >
-              <div className="text-5xl mb-4 group-hover:scale-110 transition-transform">
-                ☎️
+              <div className="flex justify-center text-5xl mb-4 group-hover:scale-110 transition-transform">
+                <FaPhone className="text-primary-300" />
               </div>
               <h3 className="text-xl font-bold mb-2">Telepon</h3>
               <p className="text-sm opacity-90 mb-4">
@@ -95,11 +96,12 @@ export function ContactSection() {
             <motion.a
               whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.95 }}
-              href={`https://wa.me/${process.env.NEXT_PUBLIC_WHATSAPP_NUMBER}?text=Halo%20Avion%20AC%2C%20saya%20membutuhkan%20layanan%20AC`}
+              href="https://wa.me/6285357607825?text=Halo%20Avion%20AC%2C%20saya%20membutuhkan%20layanan%20AC"
               target="_blank"
               rel="noopener noreferrer"
-              className="inline-block px-10 py-4 bg-white text-primary-600 rounded-lg font-bold text-lg hover:bg-gray-100 transition-colors shadow-lg"
+              className="inline-flex items-center gap-3 px-10 py-4 bg-white text-primary-600 rounded-lg font-bold text-lg hover:bg-gray-100 transition-colors shadow-lg"
             >
+              <FaWhatsapp className="text-2xl" />
               Hubungi via WhatsApp Sekarang
             </motion.a>
           </motion.div>

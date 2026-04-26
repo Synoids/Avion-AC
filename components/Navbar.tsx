@@ -3,6 +3,7 @@
 import React, { useState, useEffect } from "react";
 import Link from "next/link";
 import { motion } from "framer-motion";
+import { FaWhatsapp } from "react-icons/fa";
 
 const navItems = [
   { name: "Beranda", href: "/" },
@@ -64,12 +65,13 @@ export function Navbar() {
             <motion.a
               whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.95 }}
-              href={`https://wa.me/${process.env.NEXT_PUBLIC_WHATSAPP_NUMBER}?text=${process.env.NEXT_PUBLIC_WHATSAPP_MESSAGE}`}
+              href="https://wa.me/6285357607825?text=Halo%20Avion%20AC%2C%20saya%20ingin%20mengetahui%20layanan%20Anda"
               target="_blank"
               rel="noopener noreferrer"
-              className="px-6 py-2 bg-primary-600 text-white rounded-lg hover:bg-primary-700 transition-colors font-medium"
+              className="flex items-center gap-2 px-6 py-2 bg-primary-600 text-white rounded-lg hover:bg-primary-700 transition-colors font-medium"
             >
-              WhatsApp
+              <FaWhatsapp className="text-xl" />
+              <span>WhatsApp</span>
             </motion.a>
           </div>
 
@@ -116,12 +118,13 @@ export function Navbar() {
             ))}
             <div className="px-4 py-2">
               <a
-              href={`https://wa.me/${process.env.NEXT_PUBLIC_WHATSAPP_NUMBER}`}
+                href="https://wa.me/6285357607825"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="block w-full px-4 py-2 bg-primary-600 text-white rounded-lg text-center hover:bg-primary-700 transition-colors font-medium"
+                className="flex items-center justify-center gap-2 w-full px-4 py-2 bg-primary-600 text-white rounded-lg text-center hover:bg-primary-700 transition-colors font-medium"
               >
-                WhatsApp
+                <FaWhatsapp className="text-xl" />
+                <span>WhatsApp</span>
               </a>
             </div>
           </motion.div>

@@ -20,7 +20,7 @@ export default function AboutPage() {
                 </h2>
                 <p className="text-gray-700 leading-relaxed mb-4">
                   Avion AC adalah perusahaan jasa layanan air conditioner yang telah berpengalaman
-                  melayani masyarakat Palembang dan sekitarnya. Kami didirikan dengan komitmen untuk
+                  melayani masyarakat Palembang. Kami didirikan dengan komitmen untuk
                   memberikan layanan AC berkualitas tinggi dengan harga yang terjangkau.
                 </p>
                 <p className="text-gray-700 leading-relaxed">

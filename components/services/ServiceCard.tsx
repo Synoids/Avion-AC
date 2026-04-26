@@ -2,6 +2,7 @@
 
 import React, { useState } from "react";
 import { motion } from "framer-motion";
+import { FaWhatsapp } from "react-icons/fa";
 
 interface ServiceCardProps {
   service: {
@@ -62,11 +63,12 @@ export function ServiceCard({ service, index }: ServiceCardProps) {
         <motion.a
           whileHover={{ scale: 1.05 }}
           whileTap={{ scale: 0.95 }}
-          href={`https://wa.me/${process.env.NEXT_PUBLIC_WHATSAPP_NUMBER}?text=Saya%20tertarik%20dengan%20layanan%20${service.title.replace(/\s+/g, "%20")}`}
+          href={`https://wa.me/6285357607825?text=Saya%20tertarik%20dengan%20layanan%20${service.title.replace(/\s+/g, "%20")}`}
           target="_blank"
           rel="noopener noreferrer"
-          className="inline-block px-6 py-2 bg-primary-600 text-white rounded-lg font-medium hover:bg-primary-700 transition-colors"
+          className="inline-flex items-center gap-2 px-6 py-2 bg-primary-600 text-white rounded-lg font-medium hover:bg-primary-700 transition-colors"
         >
+          <FaWhatsapp className="text-xl" />
           Pesan Sekarang
         </motion.a>
       </motion.div>

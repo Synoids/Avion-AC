@@ -1,7 +1,9 @@
 import type { Metadata } from "next";
 import { Navbar } from "@/components/Navbar";
 import { Footer } from "@/components/Footer";
+import FloatingHomeButton from "@/components/FloatingHomeButton";
 import "./globals.css";
+
 
 export const metadata: Metadata = {
   title: "Avion AC - Jasa AC Palembang | Instalasi, Servis & Perbaikan",
@@ -57,8 +59,10 @@ export default function RootLayout({
       <body className="flex flex-col min-h-screen">
         <Navbar />
         <main className="flex-grow">{children}</main>
+        <FloatingHomeButton />
         <Footer />
       </body>
+
     </html>
   );
 }

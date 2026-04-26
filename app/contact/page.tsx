@@ -1,3 +1,6 @@
+import Link from "next/link";
+import { FaWhatsapp, FaFacebook, FaEnvelope, FaPhone, FaMapMarkerAlt, FaClock, FaInstagram } from "react-icons/fa";
+
 export const metadata = {
   title: "Kontak Avion AC - Hubungi Kami",
   description: "Hubungi Avion AC untuk layanan AC di Palembang. Telepon, WhatsApp, alamat, dan jam operasional.",
@@ -23,7 +26,9 @@ export default function ContactPage() {
 
                   <div className="space-y-6">
                     <div className="flex items-start gap-4">
-                      <div className="text-2xl">📞</div>
+                      <div className="text-2xl text-primary-600">
+                        <FaPhone />
+                      </div>
                       <div>
                         <h3 className="font-medium text-gray-900">Telepon / WhatsApp</h3>
                         <div className="space-y-1 text-primary-700">
@@ -44,7 +49,9 @@ export default function ContactPage() {
                     </div>
 
                     <div className="flex items-start gap-4">
-                      <div className="text-2xl">💬</div>
+                      <div className="text-2xl text-green-500">
+                        <FaWhatsapp />
+                      </div>
                       <div>
                         <h3 className="font-medium text-gray-900">WhatsApp</h3>
                         <a
@@ -53,16 +60,16 @@ export default function ContactPage() {
                           rel="noopener noreferrer"
                           className="inline-flex items-center gap-2 px-4 py-2 bg-green-600 text-white rounded-lg hover:bg-green-700 transition-colors"
                         >
-                          <svg className="w-4 h-4" fill="currentColor" viewBox="0 0 24 24">
-                            <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.67-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.076 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421-7.403h-.004a9.87 9.87 0 00-9.746 9.798c0 2.734.732 5.394 2.124 7.712l-2.256 6.556 6.722-2.213c2.308 1.268 4.909 1.937 7.612 1.937 5.388 0 9.803-4.414 9.803-9.805 0-2.618-.674-5.074-1.954-7.178A9.86 9.86 0 0012.051 6.979z" />
-                          </svg>
+                          <FaWhatsapp className="w-4 h-4" />
                           Hubungi WhatsApp
                         </a>
                       </div>
                     </div>
 
                     <div className="flex items-start gap-4">
-                      <div className="text-2xl">📱</div>
+                      <div className="text-2xl text-pink-600">
+                        <FaInstagram />
+                      </div>
                       <div>
                         <h3 className="font-medium text-gray-900">Media Sosial</h3>
                         <div className="space-y-1 text-primary-700">
@@ -87,7 +94,9 @@ export default function ContactPage() {
                     </div>
 
                     <div className="flex items-start gap-4">
-                      <div className="text-2xl">📍</div>
+                      <div className="text-2xl text-red-500">
+                        <FaMapMarkerAlt />
+                      </div>
                       <div>
                         <h3 className="font-medium text-gray-900">Alamat</h3>
                         <p className="text-gray-600">
@@ -98,7 +107,9 @@ export default function ContactPage() {
                     </div>
 
                     <div className="flex items-start gap-4">
-                      <div className="text-2xl">🕐</div>
+                      <div className="text-2xl text-orange-500">
+                        <FaClock />
+                      </div>
                       <div>
                         <h3 className="font-medium text-gray-900">Jam Operasional</h3>
                         <p className="text-gray-600">

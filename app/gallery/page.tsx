@@ -4,6 +4,8 @@ import { motion } from "framer-motion";
 import Image from "next/image";
 import { useState } from "react";
 import { galleryPhotos } from "@/data/gallery";
+import { FaInstagram, FaFacebook, FaExternalLinkAlt } from "react-icons/fa";
+import Link from "next/link";
 
 
 export default function GalleryPage() {
@@ -45,7 +47,7 @@ export default function GalleryPage() {
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             transition={{ duration: 0.5, delay: 0.3 }}
-            className="grid grid-cols-3 gap-0.5 md:gap-1"
+            className="grid grid-cols-2 md:grid-cols-3 gap-4 md:gap-6"
           >
             {galleryPhotos.map((photo, index) => (
               <motion.div
@@ -53,7 +55,8 @@ export default function GalleryPage() {
                 initial={{ opacity: 0, scale: 0.95 }}
                 animate={{ opacity: 1, scale: 1 }}
                 transition={{ duration: 0.4, delay: index * 0.08 }}
-                className="relative aspect-square overflow-hidden cursor-pointer group bg-gray-100 border-2 border-black"
+                whileHover={{ y: -5 }}
+                className="relative aspect-square overflow-hidden cursor-pointer group bg-gray-100 rounded-2xl shadow-soft hover:shadow-lg transition-all duration-300"
                 onClick={() => setSelected(photo)}
               >
                 <Image
@@ -88,6 +91,43 @@ export default function GalleryPage() {
               Belum ada foto yang tersedia.
             </div>
           )}
+
+          {/* Social Media CTA */}
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6 }}
+            className="mt-20 p-8 md:p-12 bg-gradient-to-br from-primary-50 to-accent-50 rounded-3xl text-center border border-primary-100"
+          >
+            <h2 className="text-2xl md:text-3xl font-bold text-gray-900 mb-4">
+              Ingin melihat hasil kerja lainnya?
+            </h2>
+            <p className="text-gray-600 mb-8 max-w-xl mx-auto">
+              Ikuti media sosial kami untuk update dokumentasi pekerjaan harian.
+            </p>
+            <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
+              <a
+                href="https://www.instagram.com/cuciac_plg?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw=="
+                target="_blank"
+                rel="noopener noreferrer"
+                className="flex items-center gap-2 px-8 py-3 bg-gradient-to-r from-pink-600 to-purple-600 text-white rounded-xl font-semibold hover:shadow-lg transition-all hover:scale-105"
+              >
+                <FaInstagram className="text-xl" />
+                <span>Instagram</span>
+                <FaExternalLinkAlt className="text-xs opacity-70" />
+              </a>
+              <a
+                href="https://www.facebook.com/avion.ac"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="flex items-center gap-2 px-8 py-3 bg-[#1877F2] text-white rounded-xl font-semibold hover:shadow-lg transition-all hover:scale-105"
+              >
+                <FaFacebook className="text-xl" />
+                <span>Facebook</span>
+                <FaExternalLinkAlt className="text-xs opacity-70" />
+              </a>
+            </div>
+          </motion.div>
         </div>
 
         {/* Lightbox */}

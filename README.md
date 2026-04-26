@@ -8,6 +8,7 @@ Situs profil perusahaan profesional untuk Avion AC, penyedia layanan AC terperca
 - **TypeScript** - Type-safe development
 - **Tailwind CSS** - Utility-first CSS framework
 - **Framer Motion** - Smooth animations dan transitions
+- **React Icons** - High-quality iconography
 - **React 18** - Latest React features
 
 ## 📁 Struktur Folder
@@ -58,6 +59,8 @@ Situs profil perusahaan profesional untuk Avion AC, penyedia layanan AC terperca
 - **Smooth Animations**: Subtle animations dengan Framer Motion
 - **WhatsApp Integration**: Direct messaging CTA untuk lead generation
 - **SEO Optimized**: Proper meta tags, headings, dan structured content
+- **Modern Iconography**: Menggunakan `react-icons` untuk tampilan lebih profesional
+- **UX Focused**: Quick Navigation & Floating Home Button untuk kemudahan navigasi
 - **Accessibility**: WCAG compliant design
 
 ## 🛠️ Setup & Installation
@@ -82,9 +85,9 @@ Situs profil perusahaan profesional untuk Avion AC, penyedia layanan AC terperca
 
 3. **Setup environment variables**
    
-   Edit `.env.local` dengan informasi WhatsApp Anda:
+   Edit `.env.local` dengan informasi WhatsApp Anda (Opsional, saat ini sudah di-hardcode untuk keandalan deployment):
    ```env
-   NEXT_PUBLIC_WHATSAPP_NUMBER=628xxxxxxxxxx
+   NEXT_PUBLIC_WHATSAPP_NUMBER=6285357607825
    NEXT_PUBLIC_WHATSAPP_MESSAGE=Halo%20Avion%20AC
    ```
 
@@ -164,17 +167,8 @@ npm run lint
 
 ## 🔗 WhatsApp Integration
 
-Website menggunakan WhatsApp Business API dengan format:
-```
-https://wa.me/[NOMOR]?text=[PESAN_TERENKRIPSI]
-```
+Website menggunakan WhatsApp Business API. Untuk keandalan deployment di Vercel, link WhatsApp saat ini di-hardcode langsung ke nomor tujuan: `6285357607825`.
 
-Contoh button:
-```tsx
-<a href={`https://wa.me/${process.env.NEXT_PUBLIC_WHATSAPP_NUMBER}?text=${message}`}>
-  Hubungi via WhatsApp
-</a>
-```
 
 ## 🚀 Deployment
 
@@ -248,11 +242,13 @@ NEXT_PUBLIC_WHATSAPP_MESSAGE=Halo%20Avion%20AC%2C%20saya%20ingin%20mengetahui%20
 ✅ Dark mode ready (dapat ditambahkan)  
 ✅ SEO optimized  
 ✅ Fast performance (optimized images & code splitting)  
-✅ WhatsApp integration  
-✅ Smooth animations  
-✅ Clean, maintainable code  
-✅ TypeScript throughout  
-✅ Accessibility compliant  
+✅ WhatsApp integration (Hardcoded for deployment reliability)
+✅ Smooth animations
+✅ Quick Navigation Grid (Mobile Optimized)
+✅ Floating Home Button
+✅ Clean, maintainable code
+✅ TypeScript throughout
+✅ Accessibility compliant
 
 ## 🐛 Troubleshooting
 
