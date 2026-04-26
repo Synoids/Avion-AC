@@ -1,4 +1,3 @@
-import Link from "next/link";
 import { FaWhatsapp, FaFacebook, FaEnvelope, FaPhone, FaMapMarkerAlt, FaClock, FaInstagram } from "react-icons/fa";
 
 export const metadata = {

@@ -5,7 +5,6 @@ import Image from "next/image";
 import { useState } from "react";
 import { galleryPhotos } from "@/data/gallery";
 import { FaInstagram, FaFacebook, FaExternalLinkAlt } from "react-icons/fa";
-import Link from "next/link";
 
 
 export default function GalleryPage() {
