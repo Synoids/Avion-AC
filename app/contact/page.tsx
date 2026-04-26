@@ -1,4 +1,4 @@
-import { FaWhatsapp, FaFacebook, FaEnvelope, FaPhone, FaMapMarkerAlt, FaClock, FaInstagram } from "react-icons/fa";
+import { FaWhatsapp, FaPhone, FaMapMarkerAlt, FaClock, FaInstagram } from "react-icons/fa";
 
 export const metadata = {
   title: "Kontak Avion AC - Hubungi Kami",
